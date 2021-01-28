@@ -391,7 +391,7 @@ public class calculadora {
 	}
 	
 	/*
-	 * Ens dona com a resultat la operació anterior
+	 * Ens dona com a resultat l'operació anterior
 	 */
 	public void mostraResultat(int resultat){
 		setResultatString(Integer.toString(resultat));
