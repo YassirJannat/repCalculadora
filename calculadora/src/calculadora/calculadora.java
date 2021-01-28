@@ -271,6 +271,10 @@ public class calculadora {
 
 	}
 
+	/*
+	 *Inicialitza les variables que s'utilitzaran en el programa per fer les operacións entre els dos enters
+	 */
+	
 	public void inicialitza()  {
 		operacio = "null";
 		valor1 = 0;
@@ -279,13 +283,25 @@ public class calculadora {
 		inicialitza_resultat = true;
 	}
 
+	/*
+	 *Llegeix el resultat com a string
+	 */
+	
 	public String getResultatString (){
 		return text_resultat.getText();
 	}
 
+	/*
+	 *Converteix el enter per a que es mostre en pantalla
+	 */
+	
 	public void setResultatString(String s){
 		text_resultat.setText(s);
 	}
+	
+	/*
+	 *Llegeix el string com a resultat el converteix a enter
+	 */
 
 	public int getResultatInt()  {
 		String resultat = text_resultat.getText();
