@@ -291,6 +291,10 @@ public class calculadora {
 		String resultat = text_resultat.getText();
 		return Integer.parseInt(resultat);
 	}
+	
+	/*
+	 * T'afegeix un nou digit integer
+	 */
 
 	public void afegeixNouDigit(int digit){
 		if (inicialitza_resultat)
@@ -298,7 +302,7 @@ public class calculadora {
 
 		String inputString = getResultatString();
 
-		//Elimina repeticio de zeros inicial
+		//Elimina repeticio de zeros
 		if (inputString.indexOf("0") == 0){
 			inputString = inputString.substring(1);
 		}
@@ -311,6 +315,10 @@ public class calculadora {
 		mode = MODE_ENTRADA;
 		inicialitza_resultat = false;
 	}
+	
+	/*
+	 * Executa el operador per a que es puguin fer les operacions
+	 */
 
 	public void executarOperador(String new_operacio) {
 
@@ -333,7 +341,9 @@ public class calculadora {
 
 
 	}
-
+	/*
+	 * Mostrar el resultat de la operació
+	 */
 	public void executarIgual(){
 		int resultat = 0;
 
@@ -343,7 +353,11 @@ public class calculadora {
 
 		operacio = "null";
 	} 
-
+	
+	/*
+	 * Executa el tipo d'operació que has seleccionat
+	 */
+	
 	public int executarOperacio() {
 		int resultat = 0;
 
@@ -375,7 +389,10 @@ public class calculadora {
 
 		return resultat;
 	}
-
+	
+	/*
+	 * Ens dona com a resultat la operació anterior
+	 */
 	public void mostraResultat(int resultat){
 		setResultatString(Integer.toString(resultat));
 		valor1 = resultat;
